@@ -1,0 +1,176 @@
+/* .theater {
+  width: 100%;
+  margin: auto;
+  z-index: -1;
+}
+
+.container {
+  position: relative;
+}
+.bellImage {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+
+  margin: auto;
+  z-index: 2;
+}
+.textClass {
+  position: relative;
+
+  top: 0px;
+  z-index: 4;
+}
+.pointer {
+  position: absolute;
+  top: 80%;
+  bottom: 30%;
+  left: 7%;
+
+  margin: auto;
+  z-index: 2;
+}
+.jokeText {
+  position: absolute;
+  top: 20%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  margin: auto;
+  z-index: 2;
+}
+@media (min-width: 320px) {
+  .bellImage {
+    top: 80%;
+    bottom: 30%;
+  }
+  .pointer {
+    width: 120px;
+  }
+  .bellImage {
+    width: 240px;
+  }
+}
+.textClass {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 2;
+}
+
+@media (min-width: 800px) {
+  .bellImage {
+    top: 85%;
+    bottom: 25%;
+  }
+  .bellImage {
+    width: 300px;
+  }
+  .pointer {
+    width: 200px;
+    left: 15%;
+  }
+}
+p {
+  font-size: 1.5em;
+  padding: 30px;
+  margin: 15px;
+
+  font-family: "Lobster", cursive;
+  color: aliceblue;
+  text-align: center;
+  text-shadow: 4px rgb(77, 10, 21);
+} */
+
+.theater {
+  position: fixed;
+  width: 100%;
+  margin: auto;
+
+}
+
+/* .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+.bellImage {
+  position:  absolute;
+  bottom: 25%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 8; 
+}
+
+
+.pointer {
+  position: absolute;
+  bottom: 25%; /* Center vertically */
+  left: 30%; /* Start from the left edge */
+  animation: moveRight 3s linear infinite; /* Use the moveRight animation */
+  z-index: 4;
+}
+
+@keyframes moveRight {
+  0% {
+    left: 10%; /* Start position */
+  }
+  100% {
+    left: 20%; /* End position, move all the way to the right */
+  }
+}
+
+.jokeText {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  transition: top 0.5s ease-out, left 0.5s ease-out;
+}
+
+.textClass:hover {
+  /* Move it 10% from the center on hover */
+  top: calc(50% + 10%);
+  left: calc(50% + 10%);
+}
+
+p {
+  font-size: 40px;
+  padding: 30px;
+  margin: 15px;
+  font-family: "Ariel", cursive;
+  color: aliceblue;
+  text-align: center;
+  text-shadow: 4px 4px 4px rgb(77, 10, 21);
+} 
+
+
+/* @media (min-width: 320px) {
+  .bellImage {
+    max-width: 240px;
+  }
+  .pointer {
+    max-width: 120px;
+  }
+}
+
+@media (min-width: 800px) {
+  .bellImage {
+    max-width: 300px;
+  }
+  .pointer {
+    max-width: 200px;
+  }
+}
+
+
+ 
